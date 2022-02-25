@@ -1,8 +1,13 @@
 package com.inti;
 import javax.persistence.Entity;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Ferme {
@@ -10,9 +15,9 @@ public class Ferme {
 	private String nom;
 	private Date dateAchat;
 	
-	@ManyToOne
-	@JoinColumn(name="gerant")
-	private Gerant gerant;
+	@OneToMany(mappedBy="ferme")
+	List <Gerant> liste_gerant = new ArrayList<>();
+	
 	
 	
 
