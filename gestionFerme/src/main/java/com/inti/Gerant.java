@@ -12,8 +12,8 @@ public class Gerant {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idGerant;
-	private String nom;
-	private String prenom;
+	private String nomGerant;
+	private String prenomGerant;
 	
 	@ManyToOne
 	private Ferme ferme;
@@ -26,20 +26,20 @@ public class Gerant {
 		this.idGerant = idGerant;
 	}
 
-	public String getNom() {
-		return nom;
+	public String getNomGerant() {
+		return nomGerant;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setNomGerant(String nomGerant) {
+		this.nomGerant = nomGerant;
 	}
 
-	public String getPrenom() {
-		return prenom;
+	public String getPrenomGerant() {
+		return prenomGerant;
 	}
 
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
+	public void setPrenomGerant(String prenomGerant) {
+		this.prenomGerant = prenomGerant;
 	}
 
 	public Ferme getFerme() {
